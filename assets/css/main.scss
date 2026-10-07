@@ -213,3 +213,25 @@
     margin-top: 0;
   }
 }
+
+/* Wider desktop content; preserve the existing mobile layout. */
+@media (min-width: 1280px) {
+  #main,
+  .masthead__inner-wrap,
+  .page__footer footer {
+    max-width: 1480px;
+  }
+
+  #main > .sidebar {
+    width: 220px;
+    max-width: 220px;
+  }
+
+  #main > .page {
+    width: calc(100% - 280px);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
