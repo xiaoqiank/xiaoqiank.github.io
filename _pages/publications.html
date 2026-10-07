@@ -1,11 +1,21 @@
---- layout: archive title: "Publications" permalink: /publications/ author_profile: true --- {% assign publications = site.publications | sort: "date" | reverse %} {% for paper in publications %}
-{{ paper.title | escape }}
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
 
-{{ paper.authors | markdownify }}
-{{ paper.venue | escape }}, {{ paper.year }}{% if paper.volume %}, {{ paper.volume }}({{ paper.issue }}){% endif %}, pp. {{ paper.pages }}.
-
-Paper / DOI: {{ paper.doi }}
-
-Abstract
-{% unless forloop.last %}
-{% endunless %} {% endfor %}
+{% assign publications = site.publications | sort: "date" | reverse %}
+{% for paper in publications %}
+<article class="publication-entry">
+  <h2><a href="{{ paper.url | relative_url }}">{{ paper.title | escape }}</a></h2>
+  {{ paper.authors | markdownify }}
+  <p><em>{{ paper.venue | escape }}</em>, {{ paper.year }}{% if paper.volume %}, {{ paper.volume }}({{ paper.issue }}){% endif %}, pp. {{ paper.pages }}.</p>
+  <p><a href="https://doi.org/{{ paper.doi }}">Paper / DOI: {{ paper.doi }}</a></p>
+  <details>
+    <summary>Abstract</summary>
+    <div>{{ paper.content | markdownify }}</div>
+  </details>
+</article>
+{% unless forloop.last %}<hr>{% endunless %}
+{% endfor %}
