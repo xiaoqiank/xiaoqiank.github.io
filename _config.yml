@@ -109,6 +109,11 @@ include:
   - .htaccess
   - _pages
 exclude:
+  - _publications/2009-10-01-paper-title-number-1.md
+  - _publications/2010-10-01-paper-title-number-2.md
+  - _publications/2015-10-01-paper-title-number-3.md
+  - _publications/2024-02-17-paper-title-number-4.md
+  - _publications/2025-06-08-paper-title-number-5.md
   - files
   - AGENTS.md
   - docker-compose.yaml
