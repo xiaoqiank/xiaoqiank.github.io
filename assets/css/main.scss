@@ -178,3 +178,38 @@
     padding: 12px 14px;
   }
 }
+
+/* Compact venue badges beside each publication. */
+.home-publication {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  column-gap: 22px;
+  align-items: start;
+}
+.home-publication-badge {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 3px;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #b000ae;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(85, 0, 83, 0.16);
+}
+.home-publication-body { min-width: 0; }
+@media (max-width: 760px) {
+  .home-publication {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 12px;
+  }
+  .home-publication-badge {
+    justify-self: start;
+    min-width: 110px;
+    margin-top: 0;
+  }
+}
