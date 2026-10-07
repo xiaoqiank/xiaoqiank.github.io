@@ -27,7 +27,6 @@ publication_order:
     {% assign paper = site.publications | where: "doi", doi | first %}
     {% if paper %}
     <article class="home-publication">
-      <p class="home-publication-label">{% case paper.doi %}{% when '10.1109/SP63933.2026.00133' %}S&amp;P 2026{% when '10.1109/TDSC.2026.3692543' %}TDSC 2026{% when '10.1109/TPDS.2022.3167434' %}TPDS 2022{% endcase %}</p>
       <h3>{{ paper.title | escape }}</h3>
       <div class="home-publication-authors">{{ paper.authors | markdownify }}</div>
       <p class="home-publication-venue"><em>{{ paper.venue | escape }}</em>, {{ paper.year }}{% if paper.volume %}, {{ paper.volume }}({{ paper.issue }}){% endif %}, pp. {{ paper.pages }}.</p>
