@@ -23,7 +23,7 @@ repository: "xiaoqiank/xiaoqiank.github.io"
 can be done by editing /_includes/author-profile.html
 author:
   name: "Xiaoqian Sun"
-  avatar: "sxq.jpg"
+  avatar:  "sxq.jpg"
   bio: "Ph.D. Candidate in Network and Information Security"
   employer: "Nankai University"
   github: "xiaoqiank"
