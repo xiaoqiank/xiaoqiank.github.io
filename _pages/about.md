@@ -27,6 +27,8 @@ publication_order:
     {% assign paper = site.publications | where: "doi", doi | first %}
     {% if paper %}
     <article class="home-publication">
+      <span class="home-publication-badge">{% case paper.doi %}{% when '10.1109/SP63933.2026.00133' %}IEEE S&amp;P{% when '10.1109/TDSC.2026.3692543' %}IEEE TDSC{% when '10.1109/TPDS.2022.3167434' %}IEEE TPDS{% endcase %}</span>
+      <div class="home-publication-body">
       <h3>{{ paper.title | escape }}</h3>
       <div class="home-publication-authors">{{ paper.authors | markdownify }}</div>
       <p class="home-publication-venue"><em>{{ paper.venue | escape }}</em>, {{ paper.year }}{% if paper.volume %}, {{ paper.volume }}({{ paper.issue }}){% endif %}, pp. {{ paper.pages }}.</p>
@@ -35,6 +37,7 @@ publication_order:
         <summary>Abstract</summary>
         <div>{{ paper.content | markdownify }}</div>
       </details>
+      </div>
     </article>
     {% endif %}
     {% endfor %}
