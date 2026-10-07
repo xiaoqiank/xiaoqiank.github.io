@@ -1,4 +1,3 @@
-# can be done by editing /_includes/author-profile.html
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
@@ -21,7 +20,7 @@ repository: "xiaoqiank/xiaoqiank.github.io"
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization 
-can be done by editing /_includes/author-profile.html
+# can be done by editing /_includes/author-profile.html
 author:
   name: "Xiaoqian Sun"
   avatar:  "sxq.jpg"
